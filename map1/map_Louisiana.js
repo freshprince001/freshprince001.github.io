@@ -1,5 +1,5 @@
 /* global L */
-var LA = L.map('map2020').setView([30.415484, -91.185157], 10)
+var LA = L.map('map2020').setView([30.415484, -91.185157], 9)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(LA)
 var LSU = L.marker([30.411846, -91.183894]).addTo(LA)
 var EBRP = L.polygon([
