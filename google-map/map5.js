@@ -7,10 +7,10 @@ var map5 = new google.maps.Map(document.getElementById('map'), {
 })
 map5.data.loadGeoJson('https://geog4046.github.io/assignment-resources/data/us_state_demographics_ESRI_2010A.geojson')
 var style1 = function (feature) {
-  var age = feature.getProperty('MED_AGE')
-  var color = 'olive'
-  if (age < 38) {
-    color = 'green'
+  var asian = feature.getProperty('ASIAN')
+  var color = 'red'
+  if (asian < 300000) {
+    color = 'yellow'
   }
   return {
     fillColor: color,
@@ -21,11 +21,11 @@ var style1 = function (feature) {
   }
 }
 map5.data.setStyle(style1)
-var infowindow = new google.maps.InfoWindow()
+var popup = new google.maps.InfoWindow()
 map5.data.addListener('click', function (event) {
-  infowindow.setOptions({
-    content: 'The median age of ' + event.feature.getProperty('STATE_NAME') + ' is ' + event.feature.getProperty('MED_AGE') + '<br>National median: 38',
+  popup.setOptions({
+    content: 'The median numbers of' + event.feature.getProperty('STATE_NAME') + ' is ' + event.feature.getProperty('ASIAN') + '<br>National mean: 293063',
     position: event.latLng
   })
-  infowindow.open(map5)
+  popup.open(map5)
 })
