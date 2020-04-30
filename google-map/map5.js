@@ -5,7 +5,7 @@ var map5 = new google.maps.Map(document.getElementById('map'), {
   mapTypeId: 'terrain',
   gestureHandling: 'greedy'
 })
-map5.data.loadGeoJson('https://geog4046.github.io/portfolio/data/us_state_demographics_ESRI_2010A.geojson')
+map5.data.loadGeoJson('https://geog4046.github.io/assignment-resources/data/us_state_demographics_ESRI_2010A.geojson')
 var style1 = function (feature) {
   var age = feature.getProperty('MED_AGE')
   var color = 'olive'
