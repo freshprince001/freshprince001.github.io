@@ -1,5 +1,5 @@
 /* global L jQuery */
-var Jena = L.map('mapofjena').setView([52.00, -100.00], 3)
+var Jena = L.map('mapofjena').setView([50.55, 11.3520], 8)
 var statesLayerObject = L.layerGroup().addTo(mapofjena)
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
